@@ -13,3 +13,4 @@ script:
  - ovs-vsctl --version
  - sudo /usr/share/openvswitch/scripts/ovs-ctl start
  - sudo ovs-vsctl add-br ovs-br0
+ - lsmod | grep openvswitch

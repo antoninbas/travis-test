@@ -1,0 +1,15 @@
+sudo: required
+
+language: generic
+
+services:
+  - docker
+
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install openvswitch-switch
+
+script:
+ - ovs-vsctl --version
+ - sudo /usr/share/openvswitch/scripts/ovs-ctl start
+ - sudo ovs-vsctl add-br ovs-br0
